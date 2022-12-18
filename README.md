@@ -1,5 +1,6 @@
 _G.RBX_Host = "localhost"
 _G.RBX_Port = "7963"
+_G.Natzu = true
 
 request = http_request or request or HttpPost or syn.request
 
@@ -150,6 +151,12 @@ if world2 or world3 then
    print("Success")
 
 end
+spawn(function()
+    while wait(5) do
+        if _G.Natzu  then
 repeat wait(20) 
 Send()
 until  world1 == false
+        end
+    end
+end)
